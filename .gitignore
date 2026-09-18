@@ -1,0 +1,22 @@
+# Python Cache
+__pycache__/
+*.pyc
+
+# Virtual Environment
+.venv/
+
+# IDE
+.idea/
+
+# Backup
+backup/
+
+# Database
+*.db
+
+# Environment File
+.env
+
+# Build
+build/
+dist/
