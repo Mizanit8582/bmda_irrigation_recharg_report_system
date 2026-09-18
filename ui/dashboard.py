@@ -8,6 +8,7 @@ from PyQt6.QtWidgets import (
 from PyQt6.QtCore import Qt
 
 from ui.data_entry import DataEntryWindow
+from ui.view_data import ViewDataDialog
 
 import sys
 
@@ -36,7 +37,7 @@ class Dashboard(QWidget):
 
 
         self.setWindowTitle(
-            "BMDA Irrigation Report System"
+            "BMDA IRRIGATION REPORT SYSTEM"
         )
 
 
@@ -95,7 +96,7 @@ class Dashboard(QWidget):
         # =========================
 
         title = QLabel(
-            "BMDA Irrigation Report System",
+            "BMDA IRRIGATION REPORT\nSYSTEM",
             self
         )
 
@@ -109,7 +110,7 @@ class Dashboard(QWidget):
             50,
             60,
             600,
-            50
+            60
         )
 
 
@@ -274,8 +275,12 @@ class Dashboard(QWidget):
                 45
             )
 
-
             self.style_buttons()
+
+            self.view_button.clicked.connect(
+                self.open_view_data
+            )
+
 
 
 
@@ -385,7 +390,17 @@ class Dashboard(QWidget):
                 """
             )
 
+    # =========================
+    # Open View Data
+    # =========================
 
+    def open_view_data(self):
+
+        self.view_data_window = ViewDataDialog(
+            self
+        )
+
+        self.view_data_window.show()
 
     # =========================
     # Open Data Entry

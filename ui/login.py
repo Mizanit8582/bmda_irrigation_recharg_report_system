@@ -18,7 +18,7 @@ class LoginWindow(QWidget):
         super().__init__()
 
         self.setWindowTitle(
-            "Irrigation Report System"
+            "BMDA IRRIGATION REPORT SYSTEM"
         )
 
         # =========================
@@ -99,9 +99,9 @@ class LoginWindow(QWidget):
             }
         """)
 
-        title = QLabel("BMDA Irrigation Report System", self)
+        title = QLabel("BMDA IRRIGATION REPORT\n SYSTEM", self)
         title.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        title.setGeometry(50, 250, 350, 40)
+        title.setGeometry(50, 250, 350, 50)
 
         title.setStyleSheet("""
             font-size: 22px;
